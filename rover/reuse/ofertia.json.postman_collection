@@ -1,0 +1,33 @@
+{
+	"id": "8a102fab-8862-6753-56e5-97122932bfa0",
+	"name": "ofertia",
+	"description": "",
+	"order": [
+		"0dd98dd1-1dd2-ae23-8ac5-a7d8757bf2a3"
+	],
+	"folders": [],
+	"timestamp": 1460914576113,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "0dd98dd1-1dd2-ae23-8ac5-a7d8757bf2a3",
+			"headers": "",
+			"url": "http://localhost:8080/command",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1460914807396,
+			"name": "http://localhost:8080/command",
+			"description": "",
+			"collectionId": "8a102fab-8862-6753-56e5-97122932bfa0",
+			"responses": []
+		}
+	]
+}
