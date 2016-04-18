@@ -6,7 +6,7 @@ in order to implement a mechanism to use the solution remotely I implemented an 
 http://localhost:8080/command that expects on the body of the call a well formed command as explains the exercise
 
 ex.
-55
+5 5
 1 2 N 
 LMLMLMLMM
 3 3 E 

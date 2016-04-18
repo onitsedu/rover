@@ -57,6 +57,9 @@ public class InputParser {
 		Plateau p = null;
 		String[] coords = command.split(Constants.COMMAND_SEPARATOR);
 		try {
+			if (coords.length != 2) {
+				throw new CommandFormatException();
+			}
 
 			Integer upperCoord = Integer.parseInt(coords[0]);
 			Integer rightCord = Integer.parseInt(coords[1]);
@@ -74,7 +77,9 @@ public class InputParser {
 		Rover r = null;
 		String[] coords = command.split(Constants.COMMAND_SEPARATOR);
 		try {
-
+			if (coords.length != 3) {
+				throw new CommandFormatException();
+			}
 			Integer xPosition = Integer.parseInt(coords[0]);
 			Integer yPosition = Integer.parseInt(coords[1]);
 
@@ -85,8 +90,8 @@ public class InputParser {
 				throw new RoverOutOfPlateauException();
 			}
 
-		} catch (NumberFormatException e) {
-			LOGGER.severe("error parsing command number " + e);
+		} catch (IllegalArgumentException e) {
+			LOGGER.severe("error parsing command " + e.getMessage());
 
 			throw new CommandFormatException();
 		}

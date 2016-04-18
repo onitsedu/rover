@@ -5,15 +5,10 @@ import org.junit.Test;
 
 import com.suay.ofertia.exception.business.CommandFormatException;
 import com.suay.ofertia.exception.business.RoverOutOfPlateauException;
+import com.suay.ofertia.rover.BaseTest;
 import com.suay.ofertia.rover.model.Rover;
 
-public class InputParserTest {
-
-	private final static String TEST_COMMAND = "5 5\n1 2 N\nLMLMLMLMM\n3 3 E\nMMRMMRMRRM";
-
-	private final static String BAD_COMMAND = "5 51 2 N\nLMLMLML";
-
-	private final static String ROVER_OUT_COMMAND = "5 5\n1 6 N\nLMLMLMLMM";
+public class InputParserTest extends BaseTest {
 
 	@Test
 	public void testCommandParse() throws CommandFormatException, RoverOutOfPlateauException {

@@ -8,21 +8,8 @@ import com.suay.ofertia.exception.business.RoverOutOfPlateauException;
 import com.suay.ofertia.manager.MarsRoverManager;
 import com.suay.ofertia.manager.impl.MarsRoverManagerImpl;
 
-public class MarsRoverTest {
+public class MarsRoverTest extends BaseTest {
 
-	private final static String TEST_COMMAND = "5 5\n1 2 N\nLMLMLMLMM\n3 3 E\nMMRMMRMRRM";
-
-	private final static String OUT_OF_BOUNDS_COMMAND = "5 5\n1 5 N\nMMMMMMM";
-
-	private final static String BAD_COMMAND = "5 51 2 N\nLMLMLML";
-	
-	private final static String TURN_RIGHT_COMMAND = "5 5\n1 5 N\nR";
-
-	private final static String TURN_LEFT_COMMAND = "5 5\n1 4 N\nL";
-
-	private final static String MOVE_COMMAND = "5 5\n1 5 N\nM";
-
-	
 	@Test
 	public void testRover() throws RoverOutOfPlateauException, CommandFormatException {
 
@@ -31,6 +18,7 @@ public class MarsRoverTest {
 
 		Assert.assertEquals(result, "1 3 N\n5 1 E\n", result);
 	}
+
 	@Test
 	public void testTurnRightRover() throws RoverOutOfPlateauException, CommandFormatException {
 
@@ -39,6 +27,7 @@ public class MarsRoverTest {
 
 		Assert.assertEquals(result, "1 5 E\n", result);
 	}
+
 	@Test
 	public void testTurnLeftRover() throws RoverOutOfPlateauException, CommandFormatException {
 
@@ -47,16 +36,15 @@ public class MarsRoverTest {
 
 		Assert.assertEquals(result, "1 5 W\n", result);
 	}
+
 	@Test
 	public void testMoveRover() throws RoverOutOfPlateauException, CommandFormatException {
 
 		MarsRoverManager roverManager = new MarsRoverManagerImpl();
 		String result = roverManager.run(MOVE_COMMAND);
 
-		Assert.assertEquals(result, "1 5 N", result);
+		Assert.assertEquals(result, "1 5 N\n", result);
 	}
-	
-	
 
 	@Test(expected = CommandFormatException.class)
 	public void testBadCommandRover() throws RoverOutOfPlateauException, CommandFormatException {

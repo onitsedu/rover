@@ -1,33 +1,34 @@
 {
-	"id": "8a102fab-8862-6753-56e5-97122932bfa0",
+	"id": "46cd5410-0f5a-694c-c7d6-c785b399db22",
 	"name": "ofertia",
 	"description": "",
 	"order": [
-		"0dd98dd1-1dd2-ae23-8ac5-a7d8757bf2a3"
+		"ed6dc5cb-402d-1de2-adea-dd113d9797b2"
 	],
 	"folders": [],
 	"timestamp": 1460914576113,
 	"owner": 0,
-	"remoteLink": "",
 	"public": false,
+	"hasRequests": true,
 	"requests": [
 		{
-			"id": "0dd98dd1-1dd2-ae23-8ac5-a7d8757bf2a3",
+			"id": "ed6dc5cb-402d-1de2-adea-dd113d9797b2",
 			"headers": "",
 			"url": "http://localhost:8080/command",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "POST",
-			"data": null,
-			"dataMode": "params",
+			"data": [],
+			"dataMode": "raw",
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1460914807396,
+			"time": 1460965460540,
 			"name": "http://localhost:8080/command",
 			"description": "",
-			"collectionId": "8a102fab-8862-6753-56e5-97122932bfa0",
-			"responses": []
+			"collectionId": "46cd5410-0f5a-694c-c7d6-c785b399db22",
+			"responses": [],
+			"rawModeData": "5 5\r\n1 2 N \r\nLMLMLMLMM\r\n3 3 E \r\nMMRMMRMRRM"
 		}
 	]
 }
